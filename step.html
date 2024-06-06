@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+        @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+        
+        * {
+          font-family: 'Poppins', sans-serif;
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f6f7fb;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            gap: 40px;
+            width: 100%;
+        }
+        .steps{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .circle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+            background: #fff;
+            border: 4px solid #e0e0e0;
+            color: #999;
+            font-weight: 500;
+            font-size: 22px;
+            border-radius: 50%;
+            transition: all 200ms ease;
+            transition-delay: 0s;
+        }
+        .active{
+            border-color: #4070f4;
+            color: #4070f4;
+            transition-delay: 100ms;
+        }
+        .progress_bar{
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background: #e0e0e0;
+            z-index: -1;
+        }
+        .indicator{
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: #4070f4;
+            transition: all 300ms ease;
+           
+        }
+        .buttons{
+            display: flex;
+            gap: 20px;
+        }
+        button{
+            padding: 8px 25px;
+            background: #4070f4;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+            transition: all 200ms linear;
+        }
+        button:disabled{
+            background: #87a5f8;
+            cursor: not-allowed;
+        }
+        button:active{
+         transform: scale(0.97);
+        }
+    
+</style>
+<body>
+
+    <div class="container">
+        <div class="steps">
+            <span class="circle active">1</span>
+            <span class="circle">2</span>
+            <span class="circle">3</span>
+            <span class="circle">4</span>
+            <span class="circle">5</span>
+            <span class="circle">6</span>
+            <span class="circle">7</span>
+            <div class="progress_bar">
+                <span class="indicator">
+                </span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev" disabled>Prev</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+    <script>
+        //DOM Elements
+        const circles = document.querySelectorAll('.circle'),
+        progressBar = document.querySelector('.indicator'),
+        buttons = document.querySelectorAll('button');
+
+    let currentStep = 1;
+
+
+      
+        const updateSteps = (e) => {
+
+currentStep = e.target.id === "next" ? ++currentStep : --currentStep;
+
+circles.forEach((circle, index) =>{
+    circle.classList[`${index < currentStep ? "add" : "remove"}`]("active");
+});
+
+progressBar.style.width = `${((currentStep - 1) / (circles.length - 1)) * 100}%`;
+
+if(currentStep === circles.length){
+    buttons[1].disabled = true;
+}else if(currentStep === 1){
+    buttons[0].disabled = true;
+}else{
+    buttons.forEach(button => (button.disabled = false))
+}
+        };
+
+       
+       buttons.forEach((button) =>{
+        button.addEventListener('click', updateSteps);
+       })
+    </script>
+</body>
+</html>

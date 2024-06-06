@@ -1,0 +1,209 @@
+body {
+  font-family: "Varela Round", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 97vh;
+}
+body .header {
+  background-color: #404040;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  position: fixed;
+  top: 0;
+}
+body .header .container_progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  height: 96vh;
+  background: url(../img/progres_img.png) center 0/cover;
+}
+body .header .container_progress .button {
+  position: relative;
+  top: 580px;
+  font-size: 25px;
+  color: #fff;
+  font-family: Montserrat Anternates, sans-serif;
+  font-weight: bold;
+  background: #57cc02;
+  padding: 10px;
+  width: 252px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  justify-content: center;
+  cursor: pointer;
+}
+body .header .lesson1 {
+  display: none;
+  flex-direction: column;
+}
+body .header .lesson1 .progress_dot7 {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 40px;
+  font-weight: bold;
+}
+body .header .lesson1 .progress_dot7 .dot7 {
+  background: #fff;
+  padding: 5px;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #57cc02;
+}
+body .header .lesson1 .progress_dot7 .active {
+  background: #57cc02;
+  color: #fff;
+}
+body .header .lesson1 .salauat {
+  position: relative;
+  top: 70px;
+  color: #fff;
+  font-size: 12px;
+  width: 86%;
+  left: 40px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+body .header .lesson1 .refresh {
+  position: relative;
+  left: 185px;
+  top: 98px;
+  cursor: pointer;
+}
+body .header .lesson1 .button_btn {
+  position: relative;
+  top: 130px;
+  left: 64px;
+  background: #414141;
+  width: 280px;
+  height: 280px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 1px #303030;
+  color: #fff;
+  cursor: pointer;
+}
+body .header .lesson_img {
+  display: none;
+  flex-direction: column;
+}
+body .header .lesson_img .progress_dot7 {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 40px;
+  font-weight: bold;
+}
+body .header .lesson_img .progress_dot7 .dot7 {
+  background: #fff;
+  padding: 5px;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #57cc02;
+}
+body .header .lesson_img .progress_dot7 .active {
+  background: #57cc02;
+  color: #fff;
+}
+body .header .lesson_img .button {
+  position: relative;
+  top: -180px;
+  left: 72px;
+  font-size: 25px;
+  color: #fff;
+  font-family: Montserrat Anternates, sans-serif;
+  font-weight: bold;
+  background: #57cc02;
+  padding: 10px;
+  width: 252px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  justify-content: center;
+  cursor: pointer;
+}
+body .header .lesson2 {
+  display: none;
+  flex-direction: column;
+}
+body .header .lesson2 .progress_dot7 {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  top: 40px;
+  font-weight: bold;
+}
+body .header .lesson2 .progress_dot7 .dot7 {
+  background: #fff;
+  padding: 5px;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #57cc02;
+}
+body .header .lesson2 .progress_dot7 .active {
+  background: #57cc02;
+  color: #fff;
+}
+body .header .lesson2 .salauat {
+  position: relative;
+  top: 70px;
+  color: #fff;
+  font-size: 12px;
+  width: 86%;
+  left: 40px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+body .header .lesson2 .refresh {
+  position: relative;
+  left: 185px;
+  top: 98px;
+  cursor: pointer;
+}
+body .header .lesson2 .button_btn {
+  position: relative;
+  top: 130px;
+  left: 64px;
+  background: #414141;
+  width: 280px;
+  height: 280px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 1px #303030;
+  color: #fff;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
